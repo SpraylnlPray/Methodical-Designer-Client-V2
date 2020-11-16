@@ -1,5 +1,6 @@
 import Favicon from 'react-favicon';
 import './App.css';
+import React from 'react';
 
 const icon_url =
   process.env.REACT_APP_ENV === 'production'
