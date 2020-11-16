@@ -1,6 +1,7 @@
-import Favicon from 'react-favicon';
-import './App.css';
 import React from 'react';
+import Favicon from 'react-favicon';
+import Start from '../Start/Start';
+import './App.css';
 
 const icon_url =
   process.env.REACT_APP_ENV === 'production'
@@ -9,9 +10,9 @@ const icon_url =
 
 function App() {
   return (
-    <div>
+    <div className='has-background-light'>
       <Favicon url={icon_url} />
-      hello
+      <Start />
     </div>
   );
 }
