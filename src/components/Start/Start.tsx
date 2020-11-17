@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './production-icon.png';
+import { Link } from 'react-router-dom';
 
 import './Start.css';
 
@@ -30,7 +31,7 @@ const Start = () => {
       </div>
 
       <div className='hero-body is-flex is-align-items-center is-flex-direction-column'>
-        <div className='container is-flex is-align-items-center is-justify-content-space-around is-flex-direction-column'>
+        <div className='container is-flex is-align-items-center is-justify-content-space-evenly is-flex-direction-column'>
           <figure className='image logo mt-3'>
             <img className='is-rounded' src={logo} />
           </figure>
@@ -39,7 +40,9 @@ const Start = () => {
             <h2 className='subtitle'>Graph Your Projects</h2>
           </div>
           <div>
-            <button className='button is-primary mx-3'>Get Started</button>
+            <Link to='/identify' className='button is-primary mx-3'>
+              Get Started
+            </Link>
             <button className='button is-secondary mx-3'>See More</button>
           </div>
         </div>
