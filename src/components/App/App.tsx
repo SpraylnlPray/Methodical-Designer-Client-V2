@@ -9,7 +9,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Identify from '../Identify/Identify';
-import SingUp from '../SignUp/SignUp';
+import SignUp from '../SignUp/SignUp';
 import Login from '../Login/Login';
 
 const icon_url =
@@ -25,7 +25,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Start} />
           <Route path='/identify' component={Identify} />
-          <Route path='/signup' component={SingUp} />
+          <Route path='/signup' component={SignUp} />
           <Route path='/login' component={Login} />
         </Switch>
         <Redirect to='/' />

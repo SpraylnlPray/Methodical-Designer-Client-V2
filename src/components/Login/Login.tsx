@@ -1,28 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form';
 
-const Login = () => {
+import FormField from '../FormField/FormField';
+import { required, email } from '../../InputChecks';
+
+const Login = (props: any) => {
+  const handleSignIn = (formValues: any) => {
+    console.log('Signing in!');
+  };
+
+  const { pristine, reset, submitting } = props;
+
   return (
     <div
       style={{ height: '100vh', width: '25%' }}
       className='container is-flex is-flex-direction-column is-justify-content-center'
     >
-      <form>
-        <div className='field'>
-          <label className='label'>Email</label>
-          <div className='control has-icons-left'>
-            <input className='input' type='email' placeholder='max@gmail.com' />
-            <span className='icon is-small is-left'>
-              <i className='fas fa-envelope' />
-            </span>
-          </div>
-        </div>
-        <div className='field'>
-          <label className='label'>Password</label>
-          <input className='input' type='password' />
-        </div>
+      <form onSubmit={props.handleSubmit(handleSignIn)}>
+        <Field
+          name='email'
+          type='email'
+          label='Email'
+          placeholder='max@gmail.com'
+          component={FormField}
+          validate={[required, email]}
+          iconLeft='fa-envelope'
+        />
+        <Field
+          name='password'
+          type='password'
+          label='Password'
+          component={FormField}
+          iconLeft='fa-key'
+          validate={required}
+        />
         <div className='is-pulled-right'>
-          <button className='button is-link mr-3'>Login!</button>
+          <button
+            type='submit'
+            className='button is-link mr-3'
+            disabled={submitting}
+          >
+            Login!
+          </button>
+          <button
+            className='button is-secondary mr-3'
+            disabled={pristine || submitting}
+            onClick={reset}
+          >
+            Clear
+          </button>
           <Link to='/identify' className='button is-secondary '>
             Back
           </Link>
@@ -32,4 +59,6 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default reduxForm({
+  form: 'LoginForm',
+})(Login);
