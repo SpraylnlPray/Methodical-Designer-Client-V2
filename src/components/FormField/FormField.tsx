@@ -9,17 +9,20 @@ const FormField = ({
   iconRight,
   meta: { touched, error },
 }: any) => {
-  let controlIconClass = '';
-  if (iconLeft) controlIconClass += 'has-icons-left';
+  let controlIconClass = 'control';
+  if (iconLeft) controlIconClass += ' has-icons-left';
   if (iconRight) controlIconClass += ' has-icons-right';
+
+  let inputClass = 'input';
+  if (error && touched) inputClass += ' is-danger';
 
   return (
     <div className='field'>
       <label className='label'>{label}</label>
-      <div className={`control ${controlIconClass}`}>
+      <div className={`${controlIconClass}`}>
         <input
           {...input}
-          className='input'
+          className={`${inputClass}`}
           type={type}
           placeholder={placeholder ? placeholder : ''}
         />
