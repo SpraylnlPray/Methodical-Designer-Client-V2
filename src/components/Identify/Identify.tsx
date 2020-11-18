@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Hier abhängig von Viewport buttons rendern, desktop ist link, mobile öffnet modal
 const Identify = () => {
   return (
     <div

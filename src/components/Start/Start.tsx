@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './production-icon.png';
 import { Link } from 'react-router-dom';
 
 import './Start.css';
 
 const Start = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  let isOpenClass = '';
+  if (isOpen) isOpenClass = 'is-active';
+
   return (
     <div className='hero is-fullheight'>
       <div className='hero-head'>
@@ -17,11 +22,22 @@ const Start = () => {
                 </div>
                 <h3 className='title is-5'>Methodical Designer</h3>
               </a>
+              <a
+                role='button'
+                className={`navbar-burger ${isOpenClass}`}
+                aria-label='menu'
+                aria-expanded='false'
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <span aria-hidden='true'></span>
+                <span aria-hidden='true'></span>
+                <span aria-hidden='true'></span>
+              </a>
             </div>
 
-            <div id='navbarMenuHeroA' className='navbar-menu'>
+            <div className={`navbar-menu ${isOpenClass}`}>
               <div className='navbar-end'>
-                <a className='navbar-item is-active'>Home</a>
+                <a className='navbar-item'>Home</a>
                 <a className='navbar-item'>Examples</a>
                 <a className='navbar-item'>Documentation</a>
               </div>

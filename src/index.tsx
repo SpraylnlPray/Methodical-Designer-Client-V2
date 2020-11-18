@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
-
+import { BreakpointProvider } from 'react-socks';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 
@@ -16,7 +16,9 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware()));
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BreakpointProvider>
+        <App />
+      </BreakpointProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
