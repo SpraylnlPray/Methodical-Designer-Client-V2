@@ -7,7 +7,7 @@ import { required, email, minLength } from '../../InputChecks';
 const minLength8 = minLength(8);
 
 const SignupForm = (props: any) => {
-  const { submitting, handleSubmit, widthPercent } = props;
+  const { submitting, handleSubmit, widthPercent, reset, pristine } = props;
 
   return (
     <div
@@ -51,6 +51,13 @@ const SignupForm = (props: any) => {
             disabled={submitting}
           >
             Sign Up!
+          </button>
+          <button
+            className='button is-secondary mr-2'
+            disabled={pristine || submitting}
+            onClick={reset}
+          >
+            Clear
           </button>
           <Link to='/identify' className='button is-secondary'>
             Back

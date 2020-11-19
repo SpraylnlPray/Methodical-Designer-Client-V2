@@ -6,7 +6,7 @@ import FormField from '../FormField/FormField';
 import { required, email } from '../../InputChecks';
 
 const LoginForm = (props: any) => {
-  const { submitting, handleSubmit, widthPercent } = props;
+  const { submitting, handleSubmit, widthPercent, reset, pristine } = props;
 
   return (
     <div
@@ -39,6 +39,13 @@ const LoginForm = (props: any) => {
             disabled={submitting}
           >
             Login!
+          </button>
+          <button
+            className='button is-secondary mr-2'
+            disabled={pristine || submitting}
+            onClick={reset}
+          >
+            Clear
           </button>
           <Link to='/identify' className='button is-secondary '>
             Back
