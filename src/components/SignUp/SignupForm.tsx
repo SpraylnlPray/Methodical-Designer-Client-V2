@@ -7,7 +7,14 @@ import { required, email, minLength } from '../../InputChecks';
 const minLength8 = minLength(8);
 
 const SignupForm = (props: any) => {
-  const { submitting, handleSubmit, widthPercent, reset, pristine } = props;
+  const {
+    submitting,
+    handleSubmit,
+    onSubmit,
+    widthPercent,
+    reset,
+    pristine,
+  } = props;
 
   return (
     <div
@@ -17,7 +24,7 @@ const SignupForm = (props: any) => {
       <h2 className='title is-2 has-text-centered'>
         Sign up for a new Account
       </h2>
-      <form onSubmit={() => props.handleSubmit(handleSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Field
           name='name'
           type='text'
@@ -46,7 +53,7 @@ const SignupForm = (props: any) => {
         />
         <div className='is-pulled-right'>
           <button
-            type='submit'
+            // type='submit'
             className='button is-link mr-2'
             disabled={submitting}
           >

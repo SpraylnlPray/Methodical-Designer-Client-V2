@@ -1,12 +1,16 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import { Breakpoint } from 'react-socks';
+import { useHistory } from 'react-router-dom';
 
 import LoginForm from './LoginForm';
 
 const Login = () => {
+  const history = useHistory();
+
   const handleSubmit = (formValues: any) => {
     console.log('Signing in!');
+    history.push('/home');
   };
 
   return (
@@ -15,14 +19,14 @@ const Login = () => {
         <LoginForm
           // @ts-expect-error
           widthPercent={75}
-          handleSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         />
       </Breakpoint>
       <Breakpoint customQuery='(min-width: 769px)'>
         <LoginForm
           // @ts-expect-error
           widthPercent={25}
-          handleSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         />
       </Breakpoint>
     </div>

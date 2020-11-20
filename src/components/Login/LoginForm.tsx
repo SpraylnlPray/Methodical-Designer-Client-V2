@@ -6,7 +6,14 @@ import FormField from '../FormField/FormField';
 import { required, email } from '../../InputChecks';
 
 const LoginForm = (props: any) => {
-  const { submitting, handleSubmit, widthPercent, reset, pristine } = props;
+  const {
+    submitting,
+    handleSubmit,
+    onSubmit,
+    widthPercent,
+    reset,
+    pristine,
+  } = props;
 
   return (
     <div
@@ -14,7 +21,7 @@ const LoginForm = (props: any) => {
       className='container is-flex is-flex-direction-column is-justify-content-center'
     >
       <h2 className='title is-2 has-text-centered'>Log into your Account</h2>
-      <form onSubmit={() => props.handleSubmit(handleSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Field
           name='email'
           type='email'

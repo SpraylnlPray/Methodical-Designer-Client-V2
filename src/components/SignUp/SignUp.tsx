@@ -1,11 +1,14 @@
 import React from 'react';
 import { Breakpoint } from 'react-socks';
+import { useHistory } from 'react-router-dom';
 
 import SignupForm from './SignupForm';
 
 const SignUp = () => {
+  const history = useHistory();
   const handleSubmit = (formValues: any) => {
     console.log('Signing up!');
+    history.push('/home');
   };
 
   return (
@@ -14,14 +17,14 @@ const SignUp = () => {
         <SignupForm
           // @ts-expect-error
           widthPercent={75}
-          handleSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         />
       </Breakpoint>
       <Breakpoint customQuery='(min-width: 769px)'>
         <SignupForm
           // @ts-expect-error
           widthPercent={25}
-          handleSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         />
       </Breakpoint>
     </div>

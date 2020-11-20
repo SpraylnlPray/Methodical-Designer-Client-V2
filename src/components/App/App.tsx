@@ -11,6 +11,7 @@ import {
 import Identify from '../Identify/Identify';
 import SignUp from '../SignUp/SignUp';
 import Login from '../Login/Login';
+import Home from '../Home/Home';
 
 const icon_url =
   process.env.REACT_APP_ENV === 'production'
@@ -27,6 +28,7 @@ function App() {
           <Route path='/identify' component={Identify} />
           <Route path='/signup' component={SignUp} />
           <Route path='/login' component={Login} />
+          <Route path='/home' component={Home} />
         </Switch>
         <Redirect to='/' />
       </Router>
