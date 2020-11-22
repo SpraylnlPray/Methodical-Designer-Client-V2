@@ -1,4 +1,5 @@
 import React from 'react';
+import InvitesBox from '../InvitesBox/InvitesBox';
 import ProfileBox from '../ProfileBox/ProfileBox';
 import './Home.css';
 
@@ -12,11 +13,13 @@ const DesktopHome = () => {
         <div className='column is-align-self-flex-start'>
           <h1 className='title is-h1 ml-5 mt-2'>Welcome Back John Smith!</h1>
           <ProfileBox />
+          <div className='divider home-section-separator ml-3' />
+          <InvitesBox />
         </div>
 
-        <div className='divider is-vertical' />
+        <div className='divider home-column-separator' />
         <div className='column is-align-self-flex-start'>Desktop Home!</div>
-        <div className='divider is-vertical' />
+        <div className='divider home-column-separator' />
         <div className='column is-align-self-flex-start'>Desktop Home!</div>
       </div>
     </div>
