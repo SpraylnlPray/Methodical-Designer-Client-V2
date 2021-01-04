@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InviteBox = () => {
+const ProjectBox = () => {
   return (
     <div className='my-2 mx-2'>
       <div className='tile is-child box'>
@@ -10,7 +10,7 @@ const InviteBox = () => {
               <figure className='image is-64x64 mt-2'>
                 <img
                   src='https://bulma.io/images/placeholders/64x64.png'
-                  alt='Image'
+                  alt='Imagee'
                 />
               </figure>
             </div>
@@ -19,29 +19,31 @@ const InviteBox = () => {
               style={{ width: '100%' }}
             >
               <div className='is-flex'>
-                <div className='media-content is-size-5'>
-                  <strong>Kristin Watson</strong>
+                <div className='media-content is-size-5 has-text-weight-medium'>
+                  Lorem, ipsum.
                 </div>
                 <span className='icon is-medium'>
-                  <i className='fas fa-info-circle' />
+                  <i className='fas fa-trash' />
                 </span>
               </div>
-              <div className='divider home-card-separator' />
-              <p className='pt-2'>
-                A brief project description for the invited user
-              </p>
+              <div className='is-flex'>
+                <p
+                  className='pt-0 is-size-7 media-content'
+                  style={{ width: '90%' }}
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Possimus repellendus atque reiciendis dicta modi.
+                </p>
+                <span className='icon is-medium mt-1'>
+                  <i className='fas fa-chevron-right'></i>
+                </span>
+              </div>
             </div>
           </article>
-          <div className='divider home-card-separator mt-3' />
-          <div className='is-flex is-justify-content-space-evenly mt-4'>
-            <button className='button is-primary'>Accept</button>
-            <button className='button is-secondary'>More</button>
-            <button className='button is-danger'>Decline</button>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default InviteBox;
+export default ProjectBox;

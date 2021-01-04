@@ -1,6 +1,7 @@
 import React from 'react';
 import InvitesBox from '../InvitesBox/InvitesBox';
 import ProfileBox from '../ProfileBox/ProfileBox';
+import ProjectsBox from '../ProjectsBox/ProjectsBox';
 import './Home.css';
 
 const DesktopHome = () => {
@@ -18,7 +19,9 @@ const DesktopHome = () => {
         </div>
 
         <div className='divider home-column-separator' />
-        <div className='column is-align-self-flex-start'>Desktop Home!</div>
+        <div className='column is-align-self-flex-start'>
+          <ProjectsBox />
+        </div>
         <div className='divider home-column-separator' />
         <div className='column is-align-self-flex-start'>Desktop Home!</div>
       </div>
