@@ -1,7 +1,7 @@
 import React from 'react';
 import InvitesBox from '../InvitesBox/InvitesBox';
 import ProfileBox from '../ProfileBox/ProfileBox';
-import ProjectsBox from '../ProjectsBox/ProjectsBox';
+import ProjectsBox from '../ProjectsBox/DesktopProjectsBox';
 import './Home.css';
 
 const DesktopHome = () => {

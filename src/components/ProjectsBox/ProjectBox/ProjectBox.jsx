@@ -18,13 +18,10 @@ const ProjectBox = () => {
               className='is-flex is-flex-direction-column'
               style={{ width: '100%' }}
             >
-              <div className='is-flex'>
+              <div>
                 <div className='media-content is-size-5 has-text-weight-medium'>
                   Lorem, ipsum.
                 </div>
-                <span className='icon is-medium'>
-                  <i className='fas fa-trash' />
-                </span>
               </div>
               <div className='is-flex'>
                 <p
