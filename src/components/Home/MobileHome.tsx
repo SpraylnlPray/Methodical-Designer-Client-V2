@@ -6,10 +6,16 @@ import './Home.css';
 
 const MobileHome = () => {
   return (
-    <div className='is-flex is-flex-direction-column'>
+    <div
+      className='is-flex is-flex-direction-column'
+      style={{ height: '100%' }}
+    >
       <MobileHomeHeader />
 
-      <div className='is-flex-grow-2 is-flex is-flex-direction-column is-align-items-center'>
+      <div
+        className='is-flex-grow-2 is-flex is-flex-direction-column is-align-items-center'
+        style={{ overflowY: 'hidden' }}
+      >
         <span className='pt-5 is-size-4 has-text-weight-medium mb-3'>
           Welcome Back XYZ!
         </span>

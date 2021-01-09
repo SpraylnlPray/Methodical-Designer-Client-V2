@@ -5,11 +5,11 @@ import MobileHome from './MobileHome';
 
 const Home = () => {
   return (
-    <div>
-      <Breakpoint customQuery='(max-width: 769px)'>
+    <div style={{ maxHeight: '100vh', height: '100vh' }}>
+      <Breakpoint customQuery='(max-width: 769px)' style={{ height: '100%' }}>
         <MobileHome />
       </Breakpoint>
-      <Breakpoint customQuery='(min-width: 769px)'>
+      <Breakpoint customQuery='(min-width: 769px)' style={{ height: '100%' }}>
         <DesktopHome />
       </Breakpoint>
     </div>

@@ -3,7 +3,7 @@ import React from 'react';
 const InviteBox = () => {
   return (
     <div className='my-2 mx-2'>
-      <div className='tile is-child box'>
+      <div className='box'>
         <div>
           <article className='media'>
             <div className='media-left'>
@@ -27,7 +27,7 @@ const InviteBox = () => {
                 </span>
               </div>
               <div className='divider home-card-separator' />
-              <p className='pt-2'>
+              <p className='pt-2 is-size-7'>
                 A brief project description for the invited user
               </p>
             </div>
