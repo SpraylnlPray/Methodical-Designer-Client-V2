@@ -1,7 +1,6 @@
 import React from 'react';
 import InviteBox from './InviteBox/InviteBox';
 
-// todo: fix invitesbox scroll, like with projects!
 const InvitesBox = () => {
   return (
     <div

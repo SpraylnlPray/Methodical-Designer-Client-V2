@@ -51,7 +51,6 @@ const Navbar = (props: Props) => {
 };
 
 const mapStateToProps = (state: IStartMenuVisibilityState) => {
-  console.log(state);
   return {
     isMenuVisible: state.isStartMenuVisible,
   };

@@ -9,7 +9,6 @@ const Login = () => {
   const history = useHistory();
 
   const handleSubmit = (formValues: any) => {
-    console.log('Signing in!');
     history.push('/home');
   };
 
