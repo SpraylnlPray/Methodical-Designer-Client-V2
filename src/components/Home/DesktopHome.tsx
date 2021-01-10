@@ -18,7 +18,7 @@ const DesktopHome = () => {
         >
           <h1 className='title is-h1 ml-5 mt-2'>Welcome Back John Smith!</h1>
           <ProfileBox />
-          <div className='divider home-section-separator ml-3' />
+          <div className='divider home-section-separator ml-3 mt-4' />
           <InvitesBox />
         </div>
 
