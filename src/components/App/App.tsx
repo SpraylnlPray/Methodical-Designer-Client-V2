@@ -29,8 +29,8 @@ function App() {
           <Route path='/signup' component={SignUp} />
           <Route path='/login' component={Login} />
           <Route path='/home' component={Home} />
+          <Redirect to='/' />
         </Switch>
-        <Redirect to='/' />
       </Router>
     </div>
   );

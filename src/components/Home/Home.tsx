@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breakpoint } from 'react-socks';
 import DesktopHome from './DesktopHome';
-import MobileHome from './MobileHome';
+import MobileHome from './Mobile/MobileHome';
 
 const Home = () => {
   return (
