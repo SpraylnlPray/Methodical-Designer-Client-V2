@@ -5,3 +5,7 @@ interface IVisibilityAction {
 interface IStartMenuVisibilityState {
   isStartMenuVisible: boolean;
 }
+
+interface IEmptyAction {
+  type: string;
+}

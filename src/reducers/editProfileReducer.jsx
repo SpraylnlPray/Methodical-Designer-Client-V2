@@ -1,4 +1,4 @@
-import { TOGGLE_EDIT_PROFILE_VISIBILITY } from '../actions/actionTypes.tsx';
+import { TOGGLE_EDIT_PROFILE_VISIBILITY } from '../actions/actionTypes';
 
 let initState = {
   isOpen: false,
