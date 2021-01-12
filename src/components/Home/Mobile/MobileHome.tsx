@@ -4,12 +4,12 @@ import { changeMobileHomeCategory } from '../../../actions/';
 
 import MobileHomeHeader from './MobileHomeHeader';
 import MobileProjectsBox from '../../ProjectsBox/MobileProjectsBox';
-import MobileProfile from './MobileProfile';
+import MobileProfile from '../../ProfileBox/MobileProfile';
 import MobileHomeFooter from './MobileHomeFooter';
 import '../Home.css';
 import { connect } from 'react-redux';
 
-const MobileHomeSart = () => {
+const MobileHomeStart = () => {
   return (
     <div
       className='is-flex-grow-2 is-flex is-flex-direction-column is-align-items-center'
@@ -31,13 +31,14 @@ const MobileHome = (props: any) => {
   const centerComponent = () => {
     switch (selectedCategory) {
       case '':
-        return MobileHomeSart();
+        return MobileHomeStart();
       case 'profile':
         return <MobileProfile />;
       default:
         return <div>Error!!</div>;
     }
   };
+
   return (
     <div
       className='is-flex is-flex-direction-column'
@@ -47,7 +48,10 @@ const MobileHome = (props: any) => {
 
       {centerComponent()}
 
-      <MobileHomeFooter setSelectedCategory={setSelectedCategory} />
+      <MobileHomeFooter
+        setSelectedCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
+      />
     </div>
   );
 };
