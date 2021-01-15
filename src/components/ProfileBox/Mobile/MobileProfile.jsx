@@ -19,11 +19,14 @@ const MobileProfile = (props) => {
         <EditProfileModal toggleVisibility={toggleVisibility} />
       </Modal>
       <div
-        className='px-5 pt-5 is-flex is-flex-direction-column'
+        className='pt-5 is-flex is-flex-direction-column is-justify-content-center'
         style={{ height: '100%' }}
       >
         <MobileProfileInfo toggleVisibility={toggleVisibility} />
-        <div className='divider home-section-separator mt-4 has-background-grey-light' />
+        <div
+          className='divider home-section-separator mt-4 has-background-grey-light'
+          style={{ width: '95%', marginLeft: '2.5%' }}
+        />
         <MobileInvitesBox />
       </div>
     </div>

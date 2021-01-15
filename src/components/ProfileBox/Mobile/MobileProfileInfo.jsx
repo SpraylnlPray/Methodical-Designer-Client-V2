@@ -2,7 +2,7 @@ import React from 'react';
 
 const MobileProfileInfo = ({ toggleVisibility }) => {
   return (
-    <article className='media'>
+    <article className='media px-5'>
       <div className='media-left'>
         <figure className='image is-128x128'>
           <img

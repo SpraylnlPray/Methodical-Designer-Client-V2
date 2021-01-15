@@ -3,7 +3,7 @@ import React from 'react';
 import { changeMobileHomeCategory } from '../../../actions/';
 
 import MobileHomeHeader from './MobileHomeHeader';
-import MobileProjectsBox from '../../ProjectsBox/MobileProjectsBox';
+import MobileProjectsBox from '../../ProjectsBox/Mobile/MobileProjectsBox';
 import MobileProfile from '../../ProfileBox/Mobile/MobileProfile';
 import MobileHomeFooter from './MobileHomeFooter';
 import '../Home.css';

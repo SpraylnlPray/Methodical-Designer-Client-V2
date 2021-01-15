@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectBox from './ProjectBox/ProjectBox';
+import ProjectBox from '../ProjectBox';
 
 const MobileProjectsBox = () => {
   return (
