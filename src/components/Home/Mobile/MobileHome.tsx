@@ -4,7 +4,7 @@ import { changeMobileHomeCategory } from '../../../actions/';
 
 import MobileHomeHeader from './MobileHomeHeader';
 import MobileProjectsBox from '../../ProjectsBox/MobileProjectsBox';
-import MobileProfile from '../../ProfileBox/MobileProfile';
+import MobileProfile from '../../ProfileBox/Mobile/MobileProfile';
 import MobileHomeFooter from './MobileHomeFooter';
 import '../Home.css';
 import { connect } from 'react-redux';

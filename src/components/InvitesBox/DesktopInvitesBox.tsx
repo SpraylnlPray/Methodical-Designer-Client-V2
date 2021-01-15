@@ -1,5 +1,5 @@
 import React from 'react';
-import InviteBox from './InviteBox/InviteBox';
+import InviteBox from './InviteBox';
 
 const InvitesBox = () => {
   return (

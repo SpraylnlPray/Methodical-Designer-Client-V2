@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InvitesBox from '../InvitesBox/InvitesBox';
+import InvitesBox from '../InvitesBox/DesktopInvitesBox';
 import ProfileBox from '../ProfileBox/ProfileBox';
 import ProjectsBox from '../ProjectsBox/DesktopProjectsBox';
 
